@@ -30,26 +30,27 @@
         </header>
         <main>
             <div class="info-groupe">
+            <!-- Contient toutes les caractéristiques associées à la recherche -->
                 <div>
                 <!-- Texte d'intro, promesse et finalité du site -->
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div>
+                <form method="get" action="">
                 <!-- Zone de saisie de la ville -->
-                    <div class="formulaire">
-                        <form method="get" action="">
-                            <div class="picto-localisation-conteneur">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <input type="text" name="ville" value="Marseille, France" onfocus="this.value=''">
-                            <button class="btn-texte">Rechercher</button>
-                            <button class="btn-picto">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
-                        </form>
+                    <div class="formulaire-btn-picto">
+                    <!-- Zone de saisie de la ville avec un bouton sous forme de loupe qui n'est affiché qu'en version mobile -->
+                        <div class="picto-localisation-conteneur">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <input class="input" type="text" name="ville" value="Marseille, France" onfocus="this.value=''">
+                        <button class="btn-picto">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
-                </div>
+                    <button class="btn-texte">Rechercher</button>
+                    <!-- Bouton sous forme de texte -->
+                </form>
                 <div class="section-filtres">
                 <!-- Zone de selection des filtres -->
                     <div class="filtre-titre">

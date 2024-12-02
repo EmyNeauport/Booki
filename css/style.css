@@ -29,12 +29,19 @@ p {
     margin: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 body {
+/* Toute la page */
     display: flex;
     justify-content: center;
 }
 
 .conteneur-principal {
+/* Toutes les rubriques de la page (header, main, footer) */
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -49,11 +56,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }
 
 /****** Header ******/
@@ -79,6 +81,7 @@ nav {
 }
 
 .nav-conteneur {
+/* Le conteneur du lien */
     display: flex;
     height: 35px;
     align-items: end;
@@ -87,6 +90,7 @@ nav {
 }
 
 .nav-conteneur a {
+/* Le lien contenu dans le conteneur */
     padding-top: 16px;
 }
 
@@ -98,6 +102,7 @@ nav {
 /****** Main info-groupe ******/
 
 .info-groupe {
+/* Texte d'intro, promesse et finalité du site */
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -106,13 +111,19 @@ nav {
 /****** Main info-groupe -> formulaire ***********/
 
 form {
+/* L'ensemble du formulaire */
     display: flex;
     justify-content: left;
-    width: 377px;
     height: 49px;
 }
 
+.formulaire-btn-picto {
+/* Version du formulaire avec le bouton de recherche sous forme de loupe */
+    display: flex;
+}
+
 .picto-localisation-conteneur {
+/* Le conteneur qui contient le picto de localisation */
     background-color: #F2F2F2;
     border: 1px #F2F2F2 solid;
     border-bottom: 1px #F2F2F2 solid;
@@ -122,6 +133,7 @@ form {
 }
 
 .fa-location-dot {
+/* Le picto de localisation */
     width: 14px;
     height: 18px;
     margin-top: 15px;
@@ -131,17 +143,18 @@ form {
     color: black;
 }
 
-input {
+.input {
+/* La zone de saisie de la ville pour laquelle on souhaite faire une recherche */
     text-align: center;
     font-weight: 700;
     font-size: 18px;
     padding-top: 14px;
     padding-bottom: 14px;
     border: 1px #F2F2F2 solid;
-    border-right: 0;
 }
 
 button {
+/* Le bouton qui lance la recherche */
     color:#FFFFFF;
     font-weight: 700;
     font-size: 18px;
@@ -160,6 +173,7 @@ button:hover {
 }
 
 .btn-picto {
+/* Le bouton de recherche prend la forme d'un picto (affiché uniquement en version mobile) */
     width: 51px;
     height: 51px;
     border-radius: 15px;
@@ -172,31 +186,36 @@ button:hover {
 /****** Main info-groupe -> filtres ******/
 
 .section-filtres {
+/* L'ingralité de la zone qui concerne les filtres */
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
-.filtre-titre p {
+.filtre-titre h3 {
+/* Le titre de la section filtre */
     font-size: 18px;
     font-weight: 700;
     text-align: center;
-    height: 50px;
     align-content: center;
 }
 
 .filtre-grand-conteneur {
+/* Regroupe tous les filtres */
     display: flex;
     flex-direction: row;
     gap: 15px;
 }
 
 .filtre-petit-conteneur {
+/* Regroupe les filtres par 2 */
     display: flex;
     gap: 15px;
     height: 50px;
 }
 
 .filtre {
+/* Bouton qui permet de filtrer */
     display: flex;
     font-size: 17px;
     font-weight: 700;
@@ -209,16 +228,19 @@ button:hover {
 }
 
 .filtre p {
+/* Texte qui se trouve à l'intérieur du bouton qui permet de filtrer */
     font-size: 17px;
 }
 
 .filtre:hover {
     background-color: #DEEBFF;
+    cursor: pointer;
 }
 
 /****** Main info-groupe -> barre d'info *******/
 
 .info-bar {
+/* Texte explicatif associé à la recherche */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -226,6 +248,7 @@ button:hover {
 }
 
 .info-bar img {
+/* Picto qui se trouve à gauche du texte explicatif */
     height: 24px;
     width: 24px;
 }
@@ -245,6 +268,7 @@ button:hover {
 }
 
 .carte-activite {
+/* Particularités appliquées aux cartes contenues dans la rubrique des activités */
     background-color: white;
     border-radius: 20px;
     padding: 0;
@@ -252,6 +276,7 @@ button:hover {
 }
 
 .carte img {
+/* Photo contenue dans la carte */
     object-fit: cover;
 }
 
@@ -303,7 +328,7 @@ button:hover {
 
 .hebergements .carte img {
     height: 60%;
-    max-height: 125px;
+    max-height: 120px;
     width: 100%;
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
@@ -319,6 +344,7 @@ button:hover {
     margin-top: 4px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .hebergements-cartes-part > * {
@@ -363,7 +389,6 @@ button:hover {
 
 .populaires-cartes .carte {
     display: flex;
-
 }
 
 .populaires-cartes img {
@@ -433,7 +458,6 @@ button:hover {
     height: 10%;
     min-height: 46px;
     align-items: center;
-
 }
 
 .conteneur-activite > * {
@@ -474,10 +498,6 @@ button:hover {
     }
 
     .filtre-titre {
-        height: 100%;
-    }
-
-    .filtre-titre p {
         font-size: 18px;
     }
 
@@ -496,6 +516,7 @@ button:hover {
 
     .hebergements .carte img {
         max-height: none;
+        min-height: 115px;
     }
 
     .hebergements-cartes-part .carte-titre {
@@ -506,10 +527,6 @@ button:hover {
     .hebergements-cartes-part .carte-sous-titre {
         margin-bottom: 8px;
         font-size: 14px;
-    }
-
-    .hebergements-cartes-part .carte-rating {
-        margin-bottom: 5px;
     }
 
     .populaires {
@@ -605,19 +622,12 @@ button:hover {
     }
 
     form {
-        border: 1px #F2F2F2 solid;
-        border-radius: 15px;
         margin: auto;
-        width: 45vw;
-        min-width: 250px;
     }
 
-    input {
-        margin-right: 0;
-        border: 0;
-        width: 85vw;
-        min-width: 100px;
-        max-width: 300px;
+    .input {
+        margin-right: -10px;
+        max-width: 55vw;
     }
 
     .section-filtres {
@@ -643,13 +653,11 @@ button:hover {
 
     .hebergements-et-populaires {
         gap: 15px;
-       
     }
 
     .hebergements-et-populaires section {
         border-radius: 0;
         padding: 20px;
-        
     }
 
     .hebergements {
@@ -672,7 +680,6 @@ button:hover {
     .populaires {
         margin-top: 0;
         gap: 15px;
-        
     }
 
     .populaires-cartes {
