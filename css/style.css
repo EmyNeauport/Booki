@@ -681,12 +681,6 @@ button:hover {
         width: 100%;
     }
 
-    .hebergements-cartes-part a {
-        /* recommandation lors de la soutenance : les conteneurs doivent prendre toute la largeur et s'adapter à la taille de l'écran */
-        /* width: 80vw;
-        max-width: 450px; */
-    }
-
     .populaires {
         margin-top: 0;
         gap: 15px;
