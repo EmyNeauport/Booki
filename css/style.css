@@ -686,11 +686,13 @@ button:hover {
         flex-direction: column;
         margin: auto;
         gap: 15px;
+        width: 100%;
     }
 
     .populaires-cartes a {
-        width: 80vw;
-        max-width: 450px;
+        width: 100%;
+        /* recommandation lors de la soutenance : les conteneurs doivent prendre toute la largeur et s'adapter à la taille de l'écran */
+        /* max-width: 450px; */
     }
 
     .conteneur-activite {
