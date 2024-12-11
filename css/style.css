@@ -623,11 +623,18 @@ button:hover {
 
     form {
         margin: auto;
+        width: 100%;
+    }
+
+    .formulaire-btn-picto {
+        width: 100%;
     }
 
     .input {
         margin-right: -10px;
-        max-width: 55vw;
+        width: 100%;
+        /* recommandation lors de la soutenance : les conteneurs doivent prendre toute la largeur et s'adapter à la taille de l'écran */
+        /* max-width: 55vw; */
     }
 
     .section-filtres {
