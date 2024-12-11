@@ -523,7 +523,7 @@ button:hover {
         margin-bottom: 8px;
         margin-top: 0;
     }
-    
+
     .hebergements-cartes-part .carte-sous-titre {
         margin-bottom: 8px;
         font-size: 14px;
@@ -564,7 +564,7 @@ button:hover {
     main {
         gap: 35px;
     }
-    
+
     .conteneur-principal {
         padding: 0;
     }
@@ -697,8 +697,9 @@ button:hover {
         flex-direction: column;
         margin: auto;
         gap: 15px;
-        width: 80vw;
-        max-width: 450px;
+        width: 100%;
+        /* recommandation lors de la soutenance : les conteneurs doivent prendre toute la largeur et s'adapter à la taille de l'écran */
+        /* max-width: 450px; */
     }
 
     .activites img {
